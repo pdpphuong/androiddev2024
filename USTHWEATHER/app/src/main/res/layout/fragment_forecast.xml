@@ -19,7 +19,7 @@
             android:orientation="horizontal">
 
             <TextView
-                android:text="Monday"
+                android:text="@string/Monday"
                 android:layout_width="80dp"
                 android:layout_height="60dp"
                 android:id="@+id/textView1"
@@ -42,7 +42,7 @@
                     android:layout_height="30dp"
                     android:id="@+id/textView2" />
                 <TextView
-                    android:text="sunny"
+                    android:text="@string/clear"
                     android:layout_width="100dp"
                     android:layout_height="30dp"
                     android:id="@+id/textView15" />
@@ -55,7 +55,7 @@
             android:layout_height="60dp"
             android:orientation="horizontal">
             <TextView
-                android:text="Tuesday"
+                android:text="@string/Tuesday"
                 android:layout_width="80dp"
                 android:layout_height="60dp"
                 android:id="@+id/textView5"
@@ -77,7 +77,7 @@
                     android:layout_height="30dp"
                     android:id="@+id/textView4" />
                 <TextView
-                    android:text="sunshine"
+                    android:text="@string/clear"
                     android:layout_width="100dp"
                     android:layout_height="30dp"
                     android:id="@+id/textView19" />
@@ -93,7 +93,7 @@
                 android:layout_width="80dp"
                 android:layout_height="60dp"
                 android:id="@+id/textView6"
-                android:text="Wednesday"
+                android:text="@string/Wednesday"
                 android:gravity="center"/>
 
             <ImageView
@@ -113,7 +113,7 @@
                     android:layout_height="30dp"
                     android:id="@+id/textView7" />
                 <TextView
-                    android:text="windy"
+                    android:text="@string/cloudy"
                     android:layout_width="100dp"
                     android:layout_height="30dp"
                     android:id="@+id/textView20"
@@ -126,7 +126,7 @@
             android:orientation="horizontal"
             android:weightSum="1">
             <TextView
-                android:text="Thursday"
+                android:text="@string/Thursday"
                 android:layout_width="80dp"
                 android:layout_height="60dp"
                 android:id="@+id/textView8"
@@ -148,7 +148,7 @@
                     android:layout_height="30dp"
                     android:id="@+id/textView9" />
                 <TextView
-                    android:text="sunny"
+                    android:text="@string/rain"
                     android:layout_width="100dp"
                     android:layout_height="30dp"
                     android:id="@+id/textView21" />
@@ -160,7 +160,7 @@
             android:orientation="horizontal"
             android:weightSum="1">
             <TextView
-                android:text="Friday"
+                android:text="@string/Friday"
                 android:layout_width="80dp"
                 android:layout_height="60dp"
                 android:id="@+id/textView3"
@@ -186,7 +186,7 @@
                     android:layout_weight="1"
                     tools:ignore="HardcodedText" />
                 <TextView
-                    android:text="rainy"
+                    android:text="@string/humidity"
                     android:layout_width="100dp"
                     android:layout_height="30dp"
                     android:id="@+id/textView22"
@@ -200,7 +200,7 @@
             android:weightSum="1">
 
             <TextView
-                android:text="Saturday"
+                android:text="@string/Saturday"
                 android:layout_width="80dp"
                 android:layout_height="60dp"
                 android:id="@+id/textView11"
@@ -225,7 +225,7 @@
                     android:layout_weight="1"
                     tools:ignore="HardcodedText" />
                 <TextView
-                    android:text="snowy"
+                    android:text="@string/clear"
                     android:layout_width="100dp"
                     android:layout_height="30dp"
                     android:id="@+id/textView23"
@@ -238,7 +238,7 @@
             android:orientation="horizontal"
             android:weightSum="1">
             <TextView
-                android:text="Sunday"
+                android:text="@string/Sunday"
                 android:layout_width="80dp"
                 android:layout_height="60dp"
                 android:id="@+id/textView16"
@@ -263,7 +263,7 @@
                     android:layout_weight="1"
                     tools:ignore="HardcodedText" />
                 <TextView
-                    android:text="sunny"
+                    android:text="@string/clear"
                     android:layout_width="100dp"
                     android:layout_height="30dp"
                     android:id="@+id/textView24"
