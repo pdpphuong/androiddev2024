@@ -13,6 +13,7 @@
         <fragment
             android:id="@+id/weather"
             android:layout_width="match_parent"
+            android:layout_marginBottom="15dp"
             android:name="vn.edu.usth.weather.fragment_weather"
             android:layout_height="wrap_content"
             tools:layout="@layout/fragment_weather"

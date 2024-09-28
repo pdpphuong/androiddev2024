@@ -7,6 +7,12 @@
     android:background="#00FFFF"
     android:id="@+id/fragment_weather">
 
+    <ImageView
+        android:layout_marginTop="50dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY"
+        android:src="@drawable/frame"/>
 
     <ImageView
         android:id="@+id/logo"
