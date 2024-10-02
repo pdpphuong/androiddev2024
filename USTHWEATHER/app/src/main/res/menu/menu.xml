@@ -4,12 +4,12 @@
     android:id="@+id/menu">
     <item
         android:id="@+id/refresh"
-        android:icon="@drawable/sun"
+        android:icon="@drawable/refresh"
         android:title="TODO"
         app:showAsAction="always"/>
     <item
         android:id="@+id/search"
-        android:icon="@drawable/sun"
+        android:icon="@drawable/search"
         android:title="TODO"
         app:showAsAction="always"/>
     <item

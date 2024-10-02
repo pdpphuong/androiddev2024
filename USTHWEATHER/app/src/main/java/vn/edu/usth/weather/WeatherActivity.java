@@ -1,6 +1,8 @@
 package vn.edu.usth.weather;
 
 import android.os.Bundle;
+import android.os.Looper;
+import android.os.Message;
 import android.util.Log;
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -17,7 +19,11 @@ import android.media.MediaPlayer;
 import com.google.android.material.tabs.TabLayout;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Toast;
+
 import androidx.appcompat.widget.Toolbar;
+
+import android.os.Handler;
 
 public class WeatherActivity extends AppCompatActivity {
     MediaPlayer mediaPlayer;
@@ -54,6 +60,10 @@ public class WeatherActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         int itemId = item.getItemId();
         if (itemId == R.id.search) {
+            return true;
+        }
+        if(itemId == R.id.refresh){
+            test();
             return true;
         }
         return super.onOptionsItemSelected(item);
@@ -109,6 +119,40 @@ public class WeatherActivity extends AppCompatActivity {
 // returns a tab title corresponding to the specified page
             return titles[page];
         }
+    }
+
+    private void test(){
+        final Handler handler = new Handler(Looper.getMainLooper()) {
+            @Override
+            public void handleMessage(Message msg) {
+    // This method is executed in main thread
+                String content = msg.getData().getString("server_response");
+
+                Toast.makeText(WeatherActivity.this, content, Toast.LENGTH_SHORT).show();
+            }
+        };
+
+        Thread t = new Thread(new Runnable() {
+            @Override
+            public void run() {
+    // this method is run in a worker thread
+                try {
+    // wait for 5 seconds to simulate a long network access
+                    Thread.sleep(5000);
+                }
+                catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+    // Assume that we got our data from server
+                Bundle bundle = new Bundle();
+                bundle.putString("server_response", "some sample json here");
+    // notify main thread
+                Message msg = new Message();
+                msg.setData(bundle);
+                handler.sendMessage(msg);
+            }
+        });
+        t.start();
     }
 }
 
